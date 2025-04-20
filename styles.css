@@ -674,9 +674,13 @@ h3 {
     background-color: rgba(0, 0, 0, 0.8);
     overflow: auto;
 
-	h2.title{
+	h2.title-reg{
 		font-size: 1.6rem;
 		text-align: center;
+	}
+
+	h2.title{
+		font-size: 1.6rem;
 	}
 	p.emailbox{
 		border:1px solid #dcdcdc;
@@ -694,6 +698,10 @@ h3 {
     width: 90%;
     max-width: 600px;
     position: relative;
+
+	&.extrawidth{
+		max-width: 800px;
+	}
 }
 
 .close-modal {
@@ -747,6 +755,63 @@ h3 {
         margin: 20% auto;
         width: 95%;
         padding: 20px;
+    }
+}
+
+/* Schedule Modal Styles */
+.schedule-content {
+    margin-top: 20px;
+}
+
+.schedule-section {
+    margin-bottom: 30px;
+}
+
+.schedule-section h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+.schedule-section h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+	font-weight:500;
+	border-bottom: 1px solid #dadada;
+}
+
+.schedule-section p{
+	font-size: 1rem;
+	margin-bottom:15px;
+}
+
+.modal p{
+	font-size: 1rem;
+}
+
+.schedule-section ul {
+    /* list-style-type: none; */
+    padding-left: 15px;
+	margin-bottom:15px;
+}
+
+.schedule-section ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--base-100);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.schedule-section ul li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .schedule-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .schedule-section ul li {
+        font-size: 0.9rem;
     }
 }
 
