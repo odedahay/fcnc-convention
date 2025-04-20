@@ -25,7 +25,6 @@ body {
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
-	padding-bottom:1000px;
 }
 
 a {
@@ -144,8 +143,13 @@ section {
 		background-color: var(--blue);
 		margin-top: 0px!important;
     	margin-bottom: 0px!important;
+		padding: 30px 0;
 		h2, p{
 			color:white;
+		}
+		p{
+			display: block;
+			margin-bottom:30px;
 		}
 	}
 
@@ -595,11 +599,18 @@ h3 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     overflow: auto;
 
 	h2.title{
 		font-size: 1.6rem;
+		text-align: center;
+	}
+	p.emailbox{
+		border:1px solid #dcdcdc;
+		padding:20px;
+		border-radius:15px;
+		text-align: center;
 	}
 }
 
