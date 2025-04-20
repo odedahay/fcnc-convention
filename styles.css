@@ -700,7 +700,7 @@ h3 {
     position: relative;
 
 	&.extrawidth{
-		max-width: 800px;
+		max-width: 980px;
 	}
 }
 
