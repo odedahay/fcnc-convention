@@ -454,6 +454,20 @@ h3 {
 				margin-top:20px;
 				margin-bottom:10px;
 				font-size: 1.4rem;
+
+				&.sponsor-price {
+					padding:30px 0;
+					border-bottom:1px solid #dcdcdc;
+				}
+				.gold{
+					color: #CF8F06;	
+				}
+				.silver{
+					color: #938888;	
+				}
+				.bronze{
+					color: #936007;	
+				}
 			}
 			.role{
 				p {
