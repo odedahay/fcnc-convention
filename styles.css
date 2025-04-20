@@ -132,9 +132,16 @@ header {
 }
 
 section {
-	&.full-width{
+	&.full-width-grey{
 		max-width: 100%!important;
 		background-color: #F8F8F8;
+	}
+	&.full-width-blue{
+		max-width: 100%!important;
+		background-color: var(--blue);
+		h2, p{
+			color:white;
+		}
 	}
 	max-width:1440px;
 	margin:auto;
