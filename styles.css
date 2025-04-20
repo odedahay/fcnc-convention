@@ -19,7 +19,9 @@
 	--blue-400: #61dafb;
 	--blue-800: #0a61ae;
 }
-
+html {
+	scroll-behavior: smooth;
+  }
 body {
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
@@ -151,7 +153,13 @@ section {
 			display: block;
 			margin-bottom:30px;
 		}
+		h2.title{
+			margin-bottom:10px;
+			padding-bottom:10px;
+		}
 	}
+
+
 
 	h3.subtitle{
 		font-size: 1.4rem;
@@ -167,6 +175,10 @@ section {
 	@media (max-width:1440px){
 		padding-left:30px;
 		padding-right:30px;
+	}
+	@media(max-width:720px){
+		padding-left:20px;
+		padding-right:20px;
 	}
 }
 
@@ -360,6 +372,9 @@ h2 {
 	@media (max-width:1024px){
 		font-size:2.4rem;
 	}
+	@media(max-width:720px){
+		font-size:1.8rem;
+	}
 }
 
 h3 {
@@ -390,6 +405,9 @@ h3 {
 				gap:10px;
 				margin-right:100px;
 				margin-bottom:20px;
+				@media(max-width:720px){
+					margin-right:0px;
+				}
 				li {
 					display:inline-block;
 					padding-left:20px;
@@ -414,20 +432,24 @@ h3 {
 		
 		&.leaders{
 			width:50%;
+			@media(max-width:720px){
+				width:100%;
+			}
 		}
 		@media(max-width:1024px){
 			flex-direction:column;
 		}
 		article {
-			/* background-color: var(--yellow-100);
-			
-			 */
+			padding:30px;
+			flex:1;
+			@media(max-width:720px){
+				padding:15px;
+			}
 			&.box-leader{
 				border: 1px solid #dcdcdc;
 				border-radius:15px;
 			}
-			padding:30px;
-			flex:1;
+			
 			h3 {
 				margin-top:20px;
 				margin-bottom:10px;
@@ -497,8 +519,58 @@ h3 {
 
 			}
 		}
+
+		
 	}
 }
+
+.footer{
+	.footer-logo{
+		display:flex;
+		gap:20px;
+		margin-bottom: 20px;
+		align-items:center;
+
+		img{
+			width: 100px;
+            height: auto;
+            object-fit: cover;
+			margin-bottom:0;
+		}
+	}
+	.footer-desc{
+		width:50%;
+		font-size: .9rem;
+		@media(max-width:720px){
+			width:100%;
+			font-size: .75rem;
+		}
+	}
+	.footer-container {
+		display:flex;
+		gap:30px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #e9e8e8;
+
+		article {
+			padding:30px;
+			@media(max-width:720px){
+				padding:0px;
+			}
+		}
+
+	}
+	h3{
+		font-size: 1rem;
+		font-weight:600;
+	}
+	p{
+		display: block;
+		font-size: .9rem;
+	}
+}
+	
+
 
 .bento {
 	.bento-grid {
