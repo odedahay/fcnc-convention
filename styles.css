@@ -135,19 +135,30 @@ section {
 	&.full-width-grey{
 		max-width: 100%!important;
 		background-color: #F8F8F8;
+		margin-top: 0px!important;
+    	margin-bottom: -30px!important;
+		padding-bottom:30px;
 	}
 	&.full-width-blue{
 		max-width: 100%!important;
 		background-color: var(--blue);
+		margin-top: 0px!important;
+    	margin-bottom: 0px!important;
 		h2, p{
 			color:white;
 		}
 	}
+
+	h3.subtitle{
+		font-size: 1.4rem;
+	}
+	
 	max-width:1440px;
 	margin:auto;
 	gap:30px;
 	margin-top:30px;
 	margin-bottom:30px;
+
 
 	@media (max-width:1440px){
 		padding-left:30px;
@@ -395,17 +406,36 @@ h3 {
 	.jobs {
 		display:flex;
 		gap:30px;
+		margin-bottom: 20px;
+		
+		&.leaders{
+			width:50%;
+		}
 		@media(max-width:1024px){
 			flex-direction:column;
 		}
 		article {
 			/* background-color: var(--yellow-100);
+			
+			 */
+			&.box-leader{
+				border: 1px solid #dcdcdc;
+				border-radius:15px;
+			}
 			padding:30px;
-			border-radius:30px; */
 			flex:1;
 			h3 {
 				margin-top:20px;
 				margin-bottom:10px;
+				font-size: 1.4rem;
+			}
+			.role{
+				p {
+					font-size: 1rem;
+					margin-bottom:0
+				}
+				border-bottom: 1px solid #dcdcdc;
+				padding:10px 0 10px 0;
 			}
 			div {
 				font-weight:600;
@@ -414,6 +444,14 @@ h3 {
 			}
 			p {
 				margin-bottom:10px;
+			}
+			ul.sponsor{
+				padding:10px 0 0 20px;
+			}
+			ul.leader-contact{
+				padding:10px 0 0 0px;
+				font-size: .99rem;
+				list-style-type: none;
 			}
 			figure {
 				width:100%;
