@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./styles.css">
 	<script src="./scripts.js"></script>
 	<link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 	<header>
@@ -44,8 +45,8 @@
 	<main>
 		<section class="hero container">
 			<div class="hero-banner">
-				<img src="/imgs/hero-banner.jpg" class="desktop-banner" alt="FCNC Convention Banner" />
-				<img src="/imgs/hero-banner-mobile.jpg" class="mobile-banner" alt="FCNC Convention Banner Mobile" />
+				<img src="/imgs/hero-banner.jpg" class="desktop-banner" alt="FCNC Convention Banner for Desktop" />
+				<img src="/imgs/hero-banner-mobile.jpg" class="mobile-banner" alt="FCNC Convention Banner for Mobile" />
 			</div>
 		</section>
 		<section class="hero container">
@@ -64,7 +65,33 @@
 				</div>
 			</div>
 			<div class="hero-yellow">
-				<img src="/imgs/fcnc-img1.png" alt="4TH ANNUAL FCNC LEADERSHIP CONVENTION & NATIONAL GALA" width="100%" />
+				<div class="slider-container">
+					<div class="slider">
+						<div class="slide active">
+							<img src="/imgs/fcnc-img1.png" alt="FCNC Convention Image 1" />
+							<div class="slide-description">The Filipino Canadian National Congress (FCNC)  - Ottawa</div>
+						</div>
+						
+						<div class="slide">
+							<img src="/imgs/fcnc-img3.png" alt="FCNC Convention Image 3" />
+							<div class="slide-description">The Filipino Canadian National Congress (FCNC)  - Halifax</div>
+						</div>
+						<div class="slide">
+							<img src="/imgs/fcnc-img2.png" alt="FCNC Convention Image 2" />
+							<div class="slide-description">The Filipino Canadian National Congress (FCNC)  - Winnepeg</div>
+						</div>
+						
+					</div>
+					<div class="slider-controls">
+						<button class="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+						<div class="slider-dots">
+							<span class="dot active" data-slide="0"></span>
+							<span class="dot" data-slide="1"></span>
+							<span class="dot" data-slide="2"></span>
+						</div>
+						<button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="schedule" class="event container">
@@ -184,20 +211,23 @@
 						</div>
 					</div>
 				</article>
-				<!-- <article>
+				<article class="left">
 					
-					<h3>Quick Links</h3>
-					<ul class="sponsor">
-						<li>www.fcnccanada.org</li>
-						<li>Registration link</li>
+					<h3>Quick Link</h3>
+					<ul class="quick-links">
+						<li><a href="https://fcnccanada.org/" target="_blank" title="fcnccanada.org">www.fcnccanada.org</a></li>
+						<!-- <li>Registration link</li> -->
 						
 					</ul>
 				</article>
-				<article>
+				<article class="right">
 				
 					<h3>Connect With Us</h3>
-					
-				</article> -->
+					<div class="social-media">
+						<a href="https://www.facebook.com/FCNCCanada" target="_blank" title="Facebook"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+						<a href="mailto:info@fcnccanada.org" target="_blank" title="Facebook"><i class="fa-solid fa-envelope fa-xl"></i></a>
+					</div>
+				</article>
 				
 			</div>
 			<p>Copyright © 2025 FCNC</p>
@@ -262,7 +292,6 @@ communities.</p>
 					<h3>Plenary Session 3: Trailblazing the Future: Empowering Communities, Driving Change</h3>
 					<p>Objective: Focuses on innovation, progress, and transformative leadership as Filipino Canadians
 						drive positive change and forge new pathways for future generations.</p>
-						 
 					<h4>Takeaways:</h4>
 					<ul>
 					<li>Innovation as a Catalyst: Embracing emerging trends and technological advancements

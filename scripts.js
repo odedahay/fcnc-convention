@@ -82,4 +82,82 @@ document.addEventListener('DOMContentLoaded', function() {
 			this.reset();
 		});
 	}
+
+	// Slider functionality
+	const slider = document.querySelector('.slider');
+	const slides = document.querySelectorAll('.slide');
+	const dots = document.querySelectorAll('.dot');
+	const prevBtn = document.querySelector('.prev-btn');
+	const nextBtn = document.querySelector('.next-btn');
+	
+	let currentSlide = 0;
+	let slideInterval;
+
+	// Function to show a specific slide
+	function showSlide(index) {
+		// Remove active class from all slides and dots
+		slides.forEach(slide => slide.classList.remove('active'));
+		dots.forEach(dot => dot.classList.remove('active'));
+		
+		// Add active class to current slide and dot
+		slides[index].classList.add('active');
+		dots[index].classList.add('active');
+		
+		currentSlide = index;
+	}
+
+	// Function to show next slide
+	function nextSlide() {
+		currentSlide = (currentSlide + 1) % slides.length;
+		showSlide(currentSlide);
+	}
+
+	// Function to show previous slide
+	function prevSlide() {
+		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+		showSlide(currentSlide);
+	}
+
+	// Add click event to dots
+	dots.forEach((dot, index) => {
+		dot.addEventListener('click', () => {
+			showSlide(index);
+			resetInterval();
+		});
+	});
+
+	// Add click events to navigation buttons
+	prevBtn.addEventListener('click', () => {
+		prevSlide();
+		resetInterval();
+	});
+
+	nextBtn.addEventListener('click', () => {
+		nextSlide();
+		resetInterval();
+	});
+
+	// Function to reset the auto-slide interval
+	function resetInterval() {
+		clearInterval(slideInterval);
+		startAutoSlide();
+	}
+
+	// Function to start auto-sliding
+	function startAutoSlide() {
+		slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+	}
+
+	// Start auto-sliding
+	startAutoSlide();
+
+	// Pause auto-sliding when hovering over the slider
+	slider.addEventListener('mouseenter', () => {
+		clearInterval(slideInterval);
+	});
+
+	// Resume auto-sliding when mouse leaves the slider
+	slider.addEventListener('mouseleave', () => {
+		startAutoSlide();
+	});
 });
