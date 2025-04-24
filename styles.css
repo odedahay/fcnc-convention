@@ -803,6 +803,24 @@ h3 {
 		}
 
 	}
+	.footer-copyright{
+		display: flex;
+		justify-content: space-between;
+		p{
+			font-size:.85rem;
+		}
+		a {
+			color: var(--base);
+			text-decoration: none;
+			&:hover{
+				color: var(--red);
+			}
+		}
+		@media(max-width:768px){
+			flex-direction: column;
+			gap:10px;
+		}
+	}
 	h3{
 		font-size: 1rem;
 		font-weight:600;
