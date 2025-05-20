@@ -40,6 +40,13 @@ a {
 	}
 }
 
+.marging-right-1{
+	margin-right:10px;
+}
+.marging-right-2{
+	margin-right:20px;
+}
+
 header {
 	padding-top:10px;
 	padding-bottom:10px;
@@ -637,8 +644,17 @@ h3 {
 				&.sponsor-price {
 					padding:30px 0;
 					border-bottom:1px solid #dcdcdc;
+					display: flex;
+					align-items:center;
+					gap:10px;
 					@media(max-width:768px){
-						padding:10px 0;
+						font-size: 1.3rem;
+						padding:20px 0;
+						display: block;
+						.sponsor-icon{
+							display:block;
+							margin-bottom:15px;
+						}
 					}
 				}
 				.gold{
@@ -648,7 +664,7 @@ h3 {
 					color: #938888;	
 				}
 				.bronze{
-					color: #936007;	
+					color: #D47120;	
 				}
 			}
 			.role{
