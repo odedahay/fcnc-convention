@@ -1205,3 +1205,13 @@ content: "";
   padding-top:20px;
 }
 
+hr.speaker-divider {
+  border: none; /* Removes default border */
+  height: 1px; /* Sets the thickness of the line */
+  background-color: #dcdcdc; /* Sets the color of the line */
+  margin: 50px 0 20px 0; /* Adds space above and below the line */
+}
+
+.program-desc{
+	margin-bottom: 3rem;
+}
